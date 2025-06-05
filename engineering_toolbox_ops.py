@@ -25,7 +25,7 @@ with tab1:
 
 with tab2:
     st.header("G-code Viewer")
-    uploaded_file = st.file_uploader("Upload G-code file (.nc or .txt)", type=["nc", "txt"])
+    uploaded_file = st.file_uploader("Upload G-code file (.nc, .min, .txt)", type=["nc", "min", "txt"])
     if uploaded_file:
         code_lines = uploaded_file.read().decode("utf-8").splitlines()
         st.text_area("G-code Preview", value="\n".join(code_lines[:50]), height=300)
